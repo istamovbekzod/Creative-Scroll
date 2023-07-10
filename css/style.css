@@ -1,0 +1,103 @@
+@import url("reset.css");
+
+/*Подключение-Шрифтов----------------------------------*/
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+/*-----------------------------------------------------*/
+
+/*Переменные-------------------------------------------*/
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 10);
+}
+/*-----------------------------------------------------*/
+
+/*Main-Style-------------------------------------------*/
+body {
+	background: url('../img/bg.jpg') center / 50px repeat;
+	color: #fafafa;
+	font-family: raleway-c;
+	overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+.content, .hero__img, .main-header, .gallery > * {
+	will-change: transform;
+}
+/*HERO-------------------------------------------------*/
+.hero {
+}
+.hero__img {
+	width: calc(var(--index) * 35);
+	position: absolute;
+	left: 37vw;
+	top: 8vh;
+	z-index: -1;
+}
+
+.container {
+	padding: 0px 7vw;
+}
+.main-header {
+	height: 100vh;
+}
+.main-title {
+	font-size: calc(var(--index) * 8);
+	position: absolute;
+	bottom: 12vh;
+	width: min-content;
+	line-height: 0.9;
+}
+
+
+.portfolio {
+}
+.container {
+}
+.gallery {
+	display: flex;
+	padding:  calc(var(--index) * 8) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+	max-width: calc(var(--index) * 21);
+	margin-bottom: calc(var(--gallery-gap));
+	max-height: 180vh;
+	border-radius: 8px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap)	* 1.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: calc(var(--gallery-gap));
+}
+
+.text-block {
+	color: var(--color-text);
+	position: relative;
+}
+.text-block__h {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: var(--color-header);
+	margin: 0px 0px 1.5rem 0px;
+}
+.text-block__p {
+	line-height: 1.75;
+}
+/*-----------------------------------------------------*/
